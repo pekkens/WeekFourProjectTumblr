@@ -16,7 +16,7 @@ class CustomTabBarViewController: UIViewController {
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var accountButton: UIButton!
     @IBOutlet weak var trendingButton: UIButton!
-    
+    @IBOutlet weak var createButton: UIButton!
     
 //  MARK: variables
     
@@ -24,6 +24,7 @@ class CustomTabBarViewController: UIViewController {
     var searchViewController: UIViewController!
     var accountViewController: UIViewController!
     var trendingViewController: UIViewController!
+    var createViewController: UIViewController!
 
     
 //  MARK: on view did load
@@ -54,15 +55,16 @@ class CustomTabBarViewController: UIViewController {
         
         trendingViewController =
             storyboard.instantiateViewControllerWithIdentifier ("TrendingViewController") as UIViewController
+        
+        createViewController =
+            storyboard.instantiateViewControllerWithIdentifier ("CreateViewController") as UIViewController
     }
-    
     
     
 //  MARK: Actions
     
     @IBAction func homeButtonPressed(sender: UIButton) {
         loadContentView.addSubview(homeViewController.view)
-        homeViewController.view.frame = loadContentView.bounds
         sender.selected = true
         searchButton.selected = false
         accountButton.selected = false
@@ -70,16 +72,13 @@ class CustomTabBarViewController: UIViewController {
 
     }
     
-    
     @IBAction func searchButtonPressed(sender: UIButton) {
         loadContentView.addSubview(searchViewController.view)
-        searchViewController.view.frame = loadContentView.bounds
         sender.selected = true
         homeButton.selected = false
         accountButton.selected = false
         trendingButton.selected = false
     }
-    
     
     @IBAction func accountButtonPressed(sender: UIButton) {
         loadContentView.addSubview(accountViewController.view)
@@ -89,7 +88,6 @@ class CustomTabBarViewController: UIViewController {
         trendingButton.selected = false
     }
     
-    //bounds represnt hieght and width x and y at 0 , 0
     @IBAction func trendingButtonPressed(sender: UIButton) {
         loadContentView.addSubview(trendingViewController.view)
         sender.selected = true
@@ -97,5 +95,14 @@ class CustomTabBarViewController: UIViewController {
         accountButton.selected = false
         searchButton.selected = false
     }
+    
+    @IBAction func createButtonPressed(sender: UIButton) {
+        performSegueWithIdentifier("CreateViewControllerSegue", sender: nil)
+    }
+    
+    
+    
+    
+    
     
 }

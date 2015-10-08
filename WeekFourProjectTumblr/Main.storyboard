@@ -28,6 +28,18 @@
                                             <action selector="accountButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QMb-z9-nNu"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nFd-Zr-yIH">
+                                        <rect key="frame" x="250" y="12" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <state key="normal" image="trending_icon"/>
+                                        <state key="disabled" image="trending_selected_icon"/>
+                                        <state key="selected" image="trending_selected_icon"/>
+                                        <state key="highlighted" image="trending_selected_icon"/>
+                                        <connections>
+                                            <action selector="trendingButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gfZ-J7-9ZY"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dkX-1i-5jQ">
                                         <rect key="frame" x="31" y="12" width="40" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -39,12 +51,6 @@
                                         <connections>
                                             <action selector="homeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gc8-uj-yew"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zZy-Eq-KUY">
-                                        <rect key="frame" x="140" y="12" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <animations/>
-                                        <state key="normal" image="compose_button"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HtF-uZ-EGP">
                                         <rect key="frame" x="79" y="12" width="40" height="40"/>
@@ -58,16 +64,13 @@
                                             <action selector="searchButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i7W-f0-aB6"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nFd-Zr-yIH">
-                                        <rect key="frame" x="250" y="12" width="40" height="40"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zZy-Eq-KUY">
+                                        <rect key="frame" x="140" y="12" width="40" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
-                                        <state key="normal" image="trending_icon"/>
-                                        <state key="disabled" image="trending_selected_icon"/>
-                                        <state key="selected" image="trending_selected_icon"/>
-                                        <state key="highlighted" image="trending_selected_icon"/>
+                                        <state key="normal" image="compose_button"/>
                                         <connections>
-                                            <action selector="trendingButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gfZ-J7-9ZY"/>
+                                            <action selector="createButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IEg-AI-JiX"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -75,7 +78,7 @@
                                 <color key="backgroundColor" red="0.2632618248462677" green="0.34499847888946533" blue="0.43089622259140015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" id="6wb-AK-kSy">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="507"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="506"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -86,11 +89,13 @@
                     </view>
                     <connections>
                         <outlet property="accountButton" destination="8yR-dG-mqz" id="nEY-1H-MaP"/>
+                        <outlet property="createButton" destination="zZy-Eq-KUY" id="fXE-HN-gxb"/>
                         <outlet property="homeButton" destination="dkX-1i-5jQ" id="i3w-to-AR0"/>
                         <outlet property="loadContentView" destination="6wb-AK-kSy" id="RmK-Qm-4i4"/>
                         <outlet property="searchButton" destination="HtF-uZ-EGP" id="0Jc-8f-n7N"/>
                         <outlet property="tabBarContainerView" destination="WdR-j8-9Vx" id="UlY-w3-815"/>
                         <outlet property="trendingButton" destination="nFd-Zr-yIH" id="ARW-kR-NKH"/>
+                        <segue destination="IpJ-Pq-85l" kind="modal" identifier="CreateViewControllerSegue" id="QWT-ZY-0As"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -100,17 +105,71 @@
         <!--Create View Controller-->
         <scene sceneID="VKq-cy-NSt">
             <objects>
-                <viewController storyboardIdentifier="CreateViewController" id="IpJ-Pq-85l" customClass="CreateViewController" customModule="WeekFourProjectTumblr" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="IaX-1P-AAV">
+                <viewController storyboardIdentifier="CreateViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="IpJ-Pq-85l" customClass="CreateViewController" customModule="WeekFourProjectTumblr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="IaX-1P-AAV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" id="rrO-uT-cgJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.2632618248462677" green="0.34499847888946533" blue="0.43089622259140015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" id="xTo-tp-hu1">
+                                <rect key="frame" x="0.0" y="38" width="320" height="492"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="text_icon" id="XbJ-26-bEl">
+                                        <rect key="frame" x="26" y="252" width="75" height="95"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <animations/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="photo_icon" id="2Mw-1p-uCk">
+                                        <rect key="frame" x="123" y="252" width="75" height="95"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <animations/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="quote_icon" id="61R-4t-wfg">
+                                        <rect key="frame" x="218" y="252" width="75" height="96"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <animations/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="link_icon" id="wOA-9e-nyI">
+                                        <rect key="frame" x="26" y="375" width="75" height="95"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <animations/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="video_icon" id="A0y-BB-i3t">
+                                        <rect key="frame" x="218" y="376" width="75" height="95"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <animations/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="chat_icon" id="a42-oW-CoP">
+                                        <rect key="frame" x="123" y="375" width="75" height="96"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <animations/>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                            </view>
+                        </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="jNz-FS-mJm"/>
+                    <connections>
+                        <outlet property="chatIconView" destination="a42-oW-CoP" id="LF6-rN-rdF"/>
+                        <outlet property="ghostedBackgroundView" destination="rrO-uT-cgJ" id="KfN-Od-wxd"/>
+                        <outlet property="linkIconView" destination="wOA-9e-nyI" id="IfS-0Y-RqE"/>
+                        <outlet property="photoIconView" destination="2Mw-1p-uCk" id="jIc-Mr-XmO"/>
+                        <outlet property="quoteIconView" destination="61R-4t-wfg" id="q5i-6C-WEs"/>
+                        <outlet property="textIconView" destination="XbJ-26-bEl" id="nXS-CM-EKY"/>
+                        <outlet property="videoIconView" destination="A0y-BB-i3t" id="H4v-js-V9s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kcv-KA-y20" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="504" y="-195"/>
+            <point key="canvasLocation" x="160" y="-135"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="N2L-5L-fAF">
@@ -132,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gxI-gA-b9b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130" y="-195"/>
+            <point key="canvasLocation" x="-222" y="-135"/>
         </scene>
         <!--Account View Controller-->
         <scene sceneID="VLl-ZR-iNU">
@@ -155,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cKV-nS-rEb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="874" y="-201"/>
+            <point key="canvasLocation" x="526" y="-129"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="r4f-rr-NBl">
@@ -177,7 +236,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="haW-Bc-O4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-248" y="-195"/>
+            <point key="canvasLocation" x="-590" y="-135"/>
         </scene>
         <!--Trending View Controller-->
         <scene sceneID="UOl-nz-zO6">
@@ -201,22 +260,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Hc-RN-Ao0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1229" y="-201"/>
+            <point key="canvasLocation" x="891" y="-129"/>
         </scene>
     </scenes>
     <resources>
         <image name="account" width="320" height="524"/>
         <image name="account_icon" width="35" height="35"/>
         <image name="account_selected_icon" width="35" height="35"/>
+        <image name="chat_icon" width="75" height="96"/>
         <image name="compose_button" width="50" height="35"/>
         <image name="home" width="320" height="524"/>
         <image name="home_icon" width="35" height="35"/>
         <image name="home_selected_icon" width="35" height="35"/>
+        <image name="link_icon" width="75" height="95"/>
+        <image name="photo_icon" width="75" height="95"/>
+        <image name="quote_icon" width="75" height="96"/>
         <image name="search_feed" width="320" height="524"/>
         <image name="search_icon" width="35" height="35"/>
         <image name="search_selected_icon" width="35" height="35"/>
+        <image name="text_icon" width="75" height="95"/>
         <image name="trending_feed" width="320" height="1217"/>
         <image name="trending_icon" width="35" height="35"/>
         <image name="trending_selected_icon" width="35" height="35"/>
+        <image name="video_icon" width="75" height="95"/>
     </resources>
 </document>
