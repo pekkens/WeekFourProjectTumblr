@@ -85,6 +85,11 @@ class CreateViewController: UIViewController {
         }
         
     }
+    
+    @IBAction func nevermindButttonPressed(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 }
 
 

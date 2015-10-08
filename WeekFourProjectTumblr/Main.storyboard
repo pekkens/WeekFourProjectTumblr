@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="WdR-j8-9Vx">
-                                <rect key="frame" x="0.0" y="505" width="320" height="63"/>
+                                <rect key="frame" x="0.0" y="505" width="320" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8yR-dG-mqz">
@@ -116,8 +116,14 @@
                                 <animations/>
                                 <color key="backgroundColor" red="0.2632618248462677" green="0.34499847888946533" blue="0.43089622259140015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" id="2l2-bQ-gL3">
+                                <rect key="frame" x="0.0" y="505" width="320" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.15686274510000001" green="0.20392156859999999" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <view opaque="NO" contentMode="scaleToFill" id="xTo-tp-hu1">
-                                <rect key="frame" x="0.0" y="38" width="320" height="492"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="text_icon" id="XbJ-26-bEl">
@@ -153,6 +159,17 @@
                                 </subviews>
                                 <animations/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HPp-l1-Cix">
+                                <rect key="frame" x="0.0" y="505" width="320" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" title="Nevermind">
+                                    <color key="titleColor" red="0.57620000839999996" green="0.64498668910000001" blue="0.67000001669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="nevermindButttonPressed:" destination="IpJ-Pq-85l" eventType="touchUpInside" id="8Qk-9U-MP8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                     </view>
