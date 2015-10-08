@@ -14,7 +14,7 @@ class CustomTabBarViewController: UIViewController {
     @IBOutlet weak var tabBarContainerView: UIView!
     @IBOutlet weak var homeButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
-    @IBOutlet weak var profileButton: UIButton!
+    @IBOutlet weak var accountButton: UIButton!
     @IBOutlet weak var trendingButton: UIButton!
     
     
@@ -22,7 +22,7 @@ class CustomTabBarViewController: UIViewController {
     
     var homeViewController: UIViewController!
     var searchViewController: UIViewController!
-    var profileViewController: UIViewController!
+    var accountViewController: UIViewController!
     var trendingViewController: UIViewController!
 
     
@@ -36,10 +36,12 @@ class CustomTabBarViewController: UIViewController {
         self.loadContentView.backgroundColor = UIColor.isTumblrBlue()
         self.tabBarContainerView.backgroundColor = UIColor.isTumblrBlue()
 
-        //load storyboard, call/build view. 
+        
         //"Main" refers to name of storyboard as in "Main.storyboard"
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        //call view = build view
         
         homeViewController =
             storyboard.instantiateViewControllerWithIdentifier ("HomeViewController") as UIViewController
@@ -47,33 +49,53 @@ class CustomTabBarViewController: UIViewController {
         searchViewController =
             storyboard.instantiateViewControllerWithIdentifier ("SearchViewController") as UIViewController
         
-        profileViewController =
-            storyboard.instantiateViewControllerWithIdentifier ("ProfileViewController") as UIViewController
+        accountViewController =
+            storyboard.instantiateViewControllerWithIdentifier ("AccountViewController") as UIViewController
         
         trendingViewController =
             storyboard.instantiateViewControllerWithIdentifier ("TrendingViewController") as UIViewController
     }
     
     
+    
 //  MARK: Actions
     
-    @IBAction func homeButtonPressed(sender: AnyObject) {
+    @IBAction func homeButtonPressed(sender: UIButton) {
         loadContentView.addSubview(homeViewController.view)
-    }
-    
-    
-    @IBAction func searchButtonPressed(sender: AnyObject) {
-        loadContentView.addSubview(searchViewController.view)
-    }
-    
-    
-    @IBAction func profileButtonPressed(sender: AnyObject) {
-        loadContentView.addSubview(profileViewController.view)
-    }
-    
+        homeViewController.view.frame = loadContentView.bounds
+        sender.selected = true
+        searchButton.selected = false
+        accountButton.selected = false
+        trendingButton.selected = false
 
-    @IBAction func trendingButtonPressed(sender: AnyObject) {
+    }
+    
+    
+    @IBAction func searchButtonPressed(sender: UIButton) {
+        loadContentView.addSubview(searchViewController.view)
+        searchViewController.view.frame = loadContentView.bounds
+        sender.selected = true
+        homeButton.selected = false
+        accountButton.selected = false
+        trendingButton.selected = false
+    }
+    
+    
+    @IBAction func accountButtonPressed(sender: UIButton) {
+        loadContentView.addSubview(accountViewController.view)
+        sender.selected = true
+        homeButton.selected = false
+        searchButton.selected = false
+        trendingButton.selected = false
+    }
+    
+    //bounds represnt hieght and width x and y at 0 , 0
+    @IBAction func trendingButtonPressed(sender: UIButton) {
         loadContentView.addSubview(trendingViewController.view)
+        sender.selected = true
+        homeButton.selected = false
+        accountButton.selected = false
+        searchButton.selected = false
     }
     
 }

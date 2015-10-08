@@ -21,28 +21,19 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <state key="normal" image="account_icon"/>
+                                        <state key="disabled" image="account_selected_icon"/>
                                         <state key="selected" image="account_selected_icon"/>
                                         <state key="highlighted" image="account_selected_icon"/>
                                         <connections>
-                                            <action selector="profileButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="irj-M5-j96"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nFd-Zr-yIH">
-                                        <rect key="frame" x="259" y="12" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <animations/>
-                                        <state key="normal" image="trending_icon"/>
-                                        <state key="selected" image="trending_selected_icon"/>
-                                        <state key="highlighted" image="trending_selected_icon"/>
-                                        <connections>
-                                            <action selector="trendingButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gfZ-J7-9ZY"/>
+                                            <action selector="accountButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QMb-z9-nNu"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dkX-1i-5jQ">
-                                        <rect key="frame" x="24" y="12" width="40" height="40"/>
+                                        <rect key="frame" x="31" y="12" width="40" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <state key="normal" image="home_icon"/>
+                                        <state key="disabled" image="home_selected_icon"/>
                                         <state key="selected" image="home_selected_icon"/>
                                         <state key="highlighted" image="home_selected_icon"/>
                                         <connections>
@@ -60,18 +51,31 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <state key="normal" image="search_icon"/>
+                                        <state key="disabled" image="search_selected_icon"/>
                                         <state key="selected" image="search_selected_icon"/>
                                         <state key="highlighted" image="search_selected_icon"/>
                                         <connections>
                                             <action selector="searchButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i7W-f0-aB6"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nFd-Zr-yIH">
+                                        <rect key="frame" x="250" y="12" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <state key="normal" image="trending_icon"/>
+                                        <state key="disabled" image="trending_selected_icon"/>
+                                        <state key="selected" image="trending_selected_icon"/>
+                                        <state key="highlighted" image="trending_selected_icon"/>
+                                        <connections>
+                                            <action selector="trendingButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gfZ-J7-9ZY"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="0.2632618248462677" green="0.34499847888946533" blue="0.43089622259140015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" id="6wb-AK-kSy">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="506"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" id="6wb-AK-kSy">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="507"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -81,9 +85,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="accountButton" destination="8yR-dG-mqz" id="nEY-1H-MaP"/>
                         <outlet property="homeButton" destination="dkX-1i-5jQ" id="i3w-to-AR0"/>
                         <outlet property="loadContentView" destination="6wb-AK-kSy" id="RmK-Qm-4i4"/>
-                        <outlet property="profileButton" destination="8yR-dG-mqz" id="pWS-4W-gkF"/>
                         <outlet property="searchButton" destination="HtF-uZ-EGP" id="0Jc-8f-n7N"/>
                         <outlet property="tabBarContainerView" destination="WdR-j8-9Vx" id="UlY-w3-815"/>
                         <outlet property="trendingButton" destination="nFd-Zr-yIH" id="ARW-kR-NKH"/>
@@ -130,10 +134,10 @@
             </objects>
             <point key="canvasLocation" x="130" y="-195"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Account View Controller-->
         <scene sceneID="VLl-ZR-iNU">
             <objects>
-                <viewController storyboardIdentifier="ProfileViewController" id="zXi-fD-uCi" customClass="ProfileViewController" customModule="WeekFourProjectTumblr" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccountViewController" id="zXi-fD-uCi" customClass="AccountViewController" customModule="WeekFourProjectTumblr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ziq-lz-qyc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,6 +151,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cKV-nS-rEb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -182,7 +187,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="trending_feed" id="VNm-7F-o5T">
+                            <imageView opaque="NO" multipleTouchEnabled="YES" contentMode="center" image="trending_feed" id="VNm-7F-o5T">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="1217"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <animations/>
@@ -191,10 +196,12 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Hc-RN-Ao0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1248" y="-201"/>
+            <point key="canvasLocation" x="1229" y="-201"/>
         </scene>
     </scenes>
     <resources>
