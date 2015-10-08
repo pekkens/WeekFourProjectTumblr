@@ -14,6 +14,13 @@
 		7C407B371BC5AD1D0097718F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C407B351BC5AD1D0097718F /* LaunchScreen.storyboard */; };
 		7C407B421BC5AD1D0097718F /* WeekFourProjectTumblrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C407B411BC5AD1D0097718F /* WeekFourProjectTumblrTests.swift */; };
 		7C407B4D1BC5AD1D0097718F /* WeekFourProjectTumblrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C407B4C1BC5AD1D0097718F /* WeekFourProjectTumblrUITests.swift */; };
+		7C407B951BC5BD510097718F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C407B941BC5BD510097718F /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		7C407B971BC5BD600097718F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C407B961BC5BD600097718F /* SearchViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		7C407B991BC5BD900097718F /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C407B981BC5BD900097718F /* CreateViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		7C407B9B1BC5BD9B0097718F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C407B9A1BC5BD9B0097718F /* ProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		7C407B9D1BC5BE0E0097718F /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C407B9C1BC5BE0E0097718F /* TrendingViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		7C407B9F1BC5BE470097718F /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C407B9E1BC5BE470097718F /* CustomTabBarViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		7C407BA11BC5C06A0097718F /* UIColorForTumblr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C407BA01BC5C06A0097718F /* UIColorForTumblr.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,13 @@
 		7C407B481BC5AD1D0097718F /* WeekFourProjectTumblrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeekFourProjectTumblrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C407B4C1BC5AD1D0097718F /* WeekFourProjectTumblrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekFourProjectTumblrUITests.swift; sourceTree = "<group>"; };
 		7C407B4E1BC5AD1D0097718F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C407B941BC5BD510097718F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7C407B961BC5BD600097718F /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		7C407B981BC5BD900097718F /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		7C407B9A1BC5BD9B0097718F /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		7C407B9C1BC5BE0E0097718F /* TrendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
+		7C407B9E1BC5BE470097718F /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
+		7C407BA01BC5C06A0097718F /* UIColorForTumblr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorForTumblr.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +111,16 @@
 		7C407B2B1BC5AD1D0097718F /* WeekFourProjectTumblr */ = {
 			isa = PBXGroup;
 			children = (
-				7C407B2C1BC5AD1D0097718F /* AppDelegate.swift */,
-				7C407B2E1BC5AD1D0097718F /* ViewController.swift */,
 				7C407B301BC5AD1D0097718F /* Main.storyboard */,
+				7C407B2C1BC5AD1D0097718F /* AppDelegate.swift */,
+				7C407BA01BC5C06A0097718F /* UIColorForTumblr.swift */,
+				7C407B2E1BC5AD1D0097718F /* ViewController.swift */,
+				7C407B9E1BC5BE470097718F /* CustomTabBarViewController.swift */,
+				7C407B941BC5BD510097718F /* HomeViewController.swift */,
+				7C407B961BC5BD600097718F /* SearchViewController.swift */,
+				7C407B981BC5BD900097718F /* CreateViewController.swift */,
+				7C407B9A1BC5BD9B0097718F /* ProfileViewController.swift */,
+				7C407B9C1BC5BE0E0097718F /* TrendingViewController.swift */,
 				7C407B331BC5AD1D0097718F /* Assets.xcassets */,
 				7C407B351BC5AD1D0097718F /* LaunchScreen.storyboard */,
 				7C407B381BC5AD1D0097718F /* Info.plist */,
@@ -255,8 +276,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C407B9B1BC5BD9B0097718F /* ProfileViewController.swift in Sources */,
+				7C407B991BC5BD900097718F /* CreateViewController.swift in Sources */,
+				7C407B9F1BC5BE470097718F /* CustomTabBarViewController.swift in Sources */,
 				7C407B2F1BC5AD1D0097718F /* ViewController.swift in Sources */,
 				7C407B2D1BC5AD1D0097718F /* AppDelegate.swift in Sources */,
+				7C407B9D1BC5BE0E0097718F /* TrendingViewController.swift in Sources */,
+				7C407BA11BC5C06A0097718F /* UIColorForTumblr.swift in Sources */,
+				7C407B971BC5BD600097718F /* SearchViewController.swift in Sources */,
+				7C407B951BC5BD510097718F /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +424,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				INFOPLIST_FILE = WeekFourProjectTumblr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pixelatomic.WeekFourProjectTumblr;
@@ -407,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				INFOPLIST_FILE = WeekFourProjectTumblr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pixelatomic.WeekFourProjectTumblr;
@@ -481,6 +511,7 @@
 				7C407B531BC5AD1D0097718F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C407B541BC5AD1D0097718F /* Build configuration list for PBXNativeTarget "WeekFourProjectTumblrTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +520,7 @@
 				7C407B561BC5AD1D0097718F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C407B571BC5AD1D0097718F /* Build configuration list for PBXNativeTarget "WeekFourProjectTumblrUITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +529,7 @@
 				7C407B591BC5AD1D0097718F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
