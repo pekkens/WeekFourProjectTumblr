@@ -28,68 +28,87 @@ class CreateViewController: UIViewController {
         chatIconView.alpha = 0
         videoIconView.alpha = 0
         
-        let upAnimation = CGAffineTransformMakeTranslation(0, -350)
+        // a += 2 is shorthand for a = a + 2.
         
-        UIView.animateWithDuration(0.3, delay: 1, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
-            self.textIconView.center.y = 600
-            self.textIconView.alpha = 1
-            }) { (Bool) -> Void in
-                UIView.animateWithDuration(0.5, animations: { () -> Void in
-                    self.textIconView.transform = upAnimation
-                })
+        textIconView.center.y = textIconView.center.y + view.bounds.width
+        photoIconView.center.y += view.bounds.width
+        quoteIconView.center.y += view.bounds.width
+        linkIconView.center.y  += view.bounds.width
+        chatIconView.center.y  += view.bounds.width
+        videoIconView.center.y  += view.bounds.width
+        
+        print(textIconView)
+        
         }
-        
-        UIView.animateWithDuration(0.3, delay: 0.3, usingSpringWithDamping: 0.1, initialSpringVelocity: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
-            self.photoIconView.center.y = 600
-            self.photoIconView.alpha = 1
-            }) { (Bool) -> Void in
-                UIView.animateWithDuration(0.2, animations: { () -> Void in
-                    self.photoIconView.transform = upAnimation
-                })
-        }
-        
-        UIView.animateWithDuration(0.3, delay: 0.3, usingSpringWithDamping: 0.1, initialSpringVelocity: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
-            self.quoteIconView.center.y = 600
-            self.quoteIconView.alpha = 1
-            }) { (Bool) -> Void in
-                UIView.animateWithDuration(0.3, animations: { () -> Void in
-                    self.quoteIconView.transform = upAnimation
-                })
-        }
-        
-        UIView.animateWithDuration(0.3, delay: 0.3, usingSpringWithDamping: 0.1, initialSpringVelocity: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
-            self.linkIconView.center.y = 720
-            self.linkIconView.alpha = 1
-            }) { (Bool) -> Void in
-                UIView.animateWithDuration(1.0, animations: { () -> Void in
-                    self.linkIconView.transform = upAnimation
-                })
-        }
-        
-        UIView.animateWithDuration(0.3, delay: 0.3, usingSpringWithDamping: 0.1, initialSpringVelocity: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
-            self.chatIconView.center.y = 720
-            self.chatIconView.alpha = 1
-            }) { (Bool) -> Void in
-                UIView.animateWithDuration(0.8, animations: { () -> Void in
-                    self.chatIconView.transform = upAnimation
-                })
-        }
-        
-        UIView.animateWithDuration(0.3, delay: 0.3, usingSpringWithDamping: 0.1, initialSpringVelocity: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
-            self.videoIconView.center.y = 720
-            self.videoIconView.alpha = 1
-            }) { (Bool) -> Void in
-                UIView.animateWithDuration(1.5, animations: { () -> Void in
-                    self.videoIconView.transform = upAnimation
-                })
-        }
-        
-    }
     
     @IBAction func nevermindButttonPressed(sender: AnyObject) {
+        
+        UIView.animateWithDuration(1.0, delay: 0.3, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.2, options: [], animations: {
+            self.textIconView.center.y -= self.view.bounds.width
+            self.textIconView.alpha = 1.0
+            }, completion: nil)
+        
+        UIView.animateWithDuration(1.0, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.2, options: [], animations: {
+            self.photoIconView.center.y -= self.view.bounds.width
+            self.photoIconView.alpha = 1.0
+            }, completion: nil)
+        
+        UIView.animateWithDuration(1.0, delay: 0.1, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.2, options: [], animations: {
+            self.quoteIconView.center.y -= self.view.bounds.width
+            self.quoteIconView.alpha = 1.0
+            }, completion: nil)
+        
+        UIView.animateWithDuration(0.8, delay: 0.5, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.2, options: [], animations: {
+            self.linkIconView.center.y -= self.view.bounds.width
+            self.linkIconView.alpha = 1.0
+            }, completion: nil)
+        
+        UIView.animateWithDuration(0.8, delay: 0.2, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.2, options: [], animations: {
+            self.chatIconView.center.y -= self.view.bounds.width
+            self.chatIconView.alpha = 1.0
+            }, completion: nil)
+        
+        UIView.animateWithDuration(0.8, delay: 0.6, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.2, options: [], animations: {
+            self.videoIconView.center.y -= self.view.bounds.width
+            self.videoIconView.alpha = 1.0
+            }, completion: nil)
+
         dismissViewControllerAnimated(true, completion: nil)
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        
+        UIView.animateWithDuration(1.0, delay: 0.3, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.2, options: [], animations: {
+            self.textIconView.center.y -= self.view.bounds.width
+            self.textIconView.alpha = 1.0
+            }, completion: nil)
+        
+        UIView.animateWithDuration(1.0, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.2, options: [], animations: {
+            self.photoIconView.center.y -= self.view.bounds.width
+            self.photoIconView.alpha = 1.0
+            }, completion: nil)
+        
+        UIView.animateWithDuration(1.0, delay: 0.1, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.2, options: [], animations: {
+            self.quoteIconView.center.y -= self.view.bounds.width
+            self.quoteIconView.alpha = 1.0
+            }, completion: nil)
+        
+        UIView.animateWithDuration(0.8, delay: 0.5, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.2, options: [], animations: {
+            self.linkIconView.center.y -= self.view.bounds.width
+            self.linkIconView.alpha = 1.0
+            }, completion: nil)
+        
+        UIView.animateWithDuration(0.8, delay: 0.2, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.2, options: [], animations: {
+            self.chatIconView.center.y -= self.view.bounds.width
+            self.chatIconView.alpha = 1.0
+            }, completion: nil)
+        
+        UIView.animateWithDuration(0.8, delay: 0.6, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.2, options: [], animations: {
+            self.videoIconView.center.y -= self.view.bounds.width
+            self.videoIconView.alpha = 1.0
+            }, completion: nil)}
 }
 
 

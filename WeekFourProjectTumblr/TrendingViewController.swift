@@ -8,10 +8,18 @@
 
 import UIKit
 
-class TrendingViewController: UIViewController {
+class TrendingViewController: UIViewController, UIScrollViewDelegate {
+    
+    @IBOutlet weak var trendingScrollView: UIScrollView!
+    
+    @IBOutlet weak var trendingFeedView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        trendingScrollView.contentSize = CGSizeMake(320, trendingFeedView.image!.size.height)
+        trendingScrollView.delegate = self
     }
     
     
