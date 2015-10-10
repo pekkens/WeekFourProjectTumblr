@@ -43,37 +43,39 @@ class CreateViewController: UIViewController {
     
     @IBAction func nevermindButttonPressed(sender: AnyObject) {
         
-        UIView.animateWithDuration(1.0, delay: 0.3, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.2, options: [], animations: {
-            self.textIconView.center.y -= self.view.bounds.width
+        UIView.animateWithDuration(5.0, delay: 0.3, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.2, options: [], animations: {
+            self.textIconView.center.y -= self.view.bounds.width + 50
             self.textIconView.alpha = 1.0
             }, completion: nil)
         
-        UIView.animateWithDuration(1.0, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.2, options: [], animations: {
-            self.photoIconView.center.y -= self.view.bounds.width
+        UIView.animateWithDuration(5.0, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.2, options: [], animations: {
+            self.photoIconView.center.y -= self.view.bounds.width + 50
             self.photoIconView.alpha = 1.0
             }, completion: nil)
         
         UIView.animateWithDuration(1.0, delay: 0.1, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.2, options: [], animations: {
-            self.quoteIconView.center.y -= self.view.bounds.width
+            self.quoteIconView.center.y -= self.view.bounds.width + 50
             self.quoteIconView.alpha = 1.0
             }, completion: nil)
         
         UIView.animateWithDuration(0.8, delay: 0.5, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.2, options: [], animations: {
-            self.linkIconView.center.y -= self.view.bounds.width
+            self.linkIconView.center.y -= self.view.bounds.width + 50
             self.linkIconView.alpha = 1.0
             }, completion: nil)
         
         UIView.animateWithDuration(0.8, delay: 0.2, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.2, options: [], animations: {
-            self.chatIconView.center.y -= self.view.bounds.width
+            self.chatIconView.center.y -= self.view.bounds.width + 50
             self.chatIconView.alpha = 1.0
             }, completion: nil)
         
-        UIView.animateWithDuration(0.8, delay: 0.6, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.2, options: [], animations: {
-            self.videoIconView.center.y -= self.view.bounds.width
+        UIView.animateWithDuration(0.8, delay: 0.6, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.2, options: [], animations: { () -> Void in
+            self.videoIconView.center.y -= self.view.bounds.width + 50
             self.videoIconView.alpha = 1.0
-            }, completion: nil)
-
-        dismissViewControllerAnimated(true, completion: nil)
+            }) { (Bool) -> Void in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
+        
     }
     
     override func viewDidAppear(animated: Bool) {
