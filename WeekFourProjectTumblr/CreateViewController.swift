@@ -11,12 +11,13 @@ import UIKit
 class CreateViewController: UIViewController {
     
     @IBOutlet weak var ghostedBackgroundView: UIView!
-    @IBOutlet weak var textIconView: UIImageView!
-    @IBOutlet weak var photoIconView: UIImageView!
-    @IBOutlet weak var quoteIconView: UIImageView!
-    @IBOutlet weak var linkIconView: UIImageView!
-    @IBOutlet weak var chatIconView: UIImageView!
-    @IBOutlet weak var videoIconView: UIImageView!
+    @IBOutlet weak var textIconView: UIButton!
+    @IBOutlet weak var photoIconView: UIButton!
+    @IBOutlet weak var quoteIconView: UIButton!
+    @IBOutlet weak var linkIconView: UIButton!
+    @IBOutlet weak var chatIconView: UIButton!
+    @IBOutlet weak var videoIconView: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
