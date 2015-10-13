@@ -12,8 +12,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" id="6wb-AK-kSy">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="506"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="loading-1" id="lr3-Bb-U79">
+                                        <rect key="frame" x="129" y="244" width="61" height="19"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <animations/>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <view contentMode="scaleToFill" id="WdR-j8-9Vx">
-                                <rect key="frame" x="0.0" y="505" width="320" height="65"/>
+                                <rect key="frame" x="0.0" y="503" width="320" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8yR-dG-mqz">
@@ -76,19 +89,6 @@
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="0.2632618248462677" green="0.34499847888946533" blue="0.43089622259140015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" id="6wb-AK-kSy">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="506"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="loading-1" id="lr3-Bb-U79">
-                                        <rect key="frame" x="129" y="244" width="61" height="19"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <animations/>
-                                    </imageView>
-                                </subviews>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <animations/>
@@ -200,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kcv-KA-y20" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="160" y="-135"/>
+            <point key="canvasLocation" x="159" y="-135"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="N2L-5L-fAF">
@@ -289,40 +289,93 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <animations/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="home_spinner" id="aqw-0o-5vL">
-                                <rect key="frame" x="87" y="165" width="146" height="146"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <animations/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="home_overlay" id="MOQ-G1-ZmF">
-                                <rect key="frame" x="0.0" y="261" width="320" height="100"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <animations/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9Su-n0-vQf">
-                                <rect key="frame" x="254" y="26" width="66" height="32"/>
+                                <rect key="frame" x="254" y="25" width="66" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <connections>
                                     <action selector="loginButtonPressed:" destination="pSO-jM-cS7" eventType="touchUpInside" id="usk-Sj-3Cc"/>
                                 </connections>
                             </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="home_spinner" id="aqw-0o-5vL">
+                                <rect key="frame" x="87" y="165" width="146" height="146"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <animations/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="home_overlay" id="MOQ-G1-ZmF">
+                                <rect key="frame" x="0.0" y="260" width="320" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <animations/>
+                            </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="explore_popup" id="wxK-zM-fo2">
                                 <rect key="frame" x="0.0" y="431" width="185" height="77"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <animations/>
                             </imageView>
+                            <view contentMode="scaleToFill" id="4oh-4h-rmS">
+                                <rect key="frame" x="0.0" y="207" width="320" height="158"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="login_form" id="AdF-JJ-KEd">
+                                        <rect key="frame" x="10" y="11" width="300" height="132"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <animations/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" id="Na9-Ny-1L7" customClass="NextResponderTextField" customModule="WeekFourProjectTumblr" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="19" width="280" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7RX-j6-3D2">
+                                        <rect key="frame" x="10" y="100" width="151" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <connections>
+                                            <action selector="cancelLogInButtonPressed:" destination="pSO-jM-cS7" eventType="touchUpInside" id="zGf-nZ-83W"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" id="S6d-xf-MQx" customClass="NextResponderTextField" customModule="WeekFourProjectTumblr" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="64" width="280" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
+                                    </textField>
+                                </subviews>
+                                <animations/>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="cancel" destination="7RX-j6-3D2" id="KJr-EW-w6B"/>
+                        <outlet property="email" destination="Na9-Ny-1L7" id="nQS-A7-7Zx"/>
                         <outlet property="explorePopupView" destination="wxK-zM-fo2" id="euo-35-udE"/>
+                        <outlet property="loginContainer" destination="4oh-4h-rmS" id="llJ-NU-lTk"/>
+                        <outlet property="password" destination="S6d-xf-MQx" id="gYD-AV-6cx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="haW-Bc-O4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-590" y="-135"/>
+            <point key="canvasLocation" x="-591" y="-135"/>
+        </scene>
+        <!--Log In View Controller-->
+        <scene sceneID="yhx-Gx-aaS">
+            <objects>
+                <viewController storyboardIdentifier="LogInViewController" id="pyq-ju-gIZ" customClass="LogInViewController" customModule="WeekFourProjectTumblr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lOb-do-cKy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9E1-Vn-aNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-591" y="497"/>
         </scene>
         <!--Trending View Controller-->
         <scene sceneID="UOl-nz-zO6">
@@ -375,6 +428,7 @@
         <image name="link_icon" width="75" height="95"/>
         <image name="loading-1" width="61" height="19"/>
         <image name="login" width="316" height="522"/>
+        <image name="login_form" width="300" height="132"/>
         <image name="photo_icon" width="75" height="95"/>
         <image name="quote_icon" width="75" height="96"/>
         <image name="search_feed" width="320" height="524"/>

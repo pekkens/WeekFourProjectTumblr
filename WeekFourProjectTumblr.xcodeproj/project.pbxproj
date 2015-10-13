@@ -21,6 +21,8 @@
 		7C407BA11BC5C06A0097718F /* UIColorForTumblr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C407BA01BC5C06A0097718F /* UIColorForTumblr.swift */; settings = {ASSET_TAGS = (); }; };
 		7C407BA71BC628E90097718F /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C407BA61BC628E90097718F /* AccountViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		7C407BA91BC656460097718F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C407BA81BC656460097718F /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		7CE1F77D1BCCC7980049660E /* NextResponderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE1F77C1BCCC7980049660E /* NextResponderTextField.swift */; settings = {ASSET_TAGS = (); }; };
+		7CE1F77F1BCCCCE90049660E /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE1F77E1BCCCCE90049660E /* LogInViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		7C407BA01BC5C06A0097718F /* UIColorForTumblr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorForTumblr.swift; sourceTree = "<group>"; };
 		7C407BA61BC628E90097718F /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		7C407BA81BC656460097718F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7CE1F77C1BCCC7980049660E /* NextResponderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextResponderTextField.swift; sourceTree = "<group>"; };
+		7CE1F77E1BCCCCE90049660E /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +116,9 @@
 			isa = PBXGroup;
 			children = (
 				7C407BA81BC656460097718F /* Main.storyboard */,
+				7CE1F77E1BCCCCE90049660E /* LogInViewController.swift */,
 				7C407B2C1BC5AD1D0097718F /* AppDelegate.swift */,
+				7CE1F77C1BCCC7980049660E /* NextResponderTextField.swift */,
 				7C407BA01BC5C06A0097718F /* UIColorForTumblr.swift */,
 				7C407B2E1BC5AD1D0097718F /* ViewController.swift */,
 				7C407B9E1BC5BE470097718F /* CustomTabBarViewController.swift */,
@@ -277,6 +283,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C407B991BC5BD900097718F /* CreateViewController.swift in Sources */,
+				7CE1F77D1BCCC7980049660E /* NextResponderTextField.swift in Sources */,
+				7CE1F77F1BCCCCE90049660E /* LogInViewController.swift in Sources */,
 				7C407B9F1BC5BE470097718F /* CustomTabBarViewController.swift in Sources */,
 				7C407B2F1BC5AD1D0097718F /* ViewController.swift in Sources */,
 				7C407B2D1BC5AD1D0097718F /* AppDelegate.swift in Sources */,

@@ -17,12 +17,10 @@ class TrendingViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         trendingScrollView.contentSize = CGSizeMake(320, trendingFeedView.image!.size.height)
         trendingScrollView.delegate = self
     }
-    
-    
+
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject:AnyObject]?) -> Bool {
         application.statusBarHidden = true
         return true

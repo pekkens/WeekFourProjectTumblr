@@ -65,7 +65,6 @@ class CustomTabBarViewController: UIViewController {
         
         createViewController =
             storyboard.instantiateViewControllerWithIdentifier ("CreateViewController") as UIViewController
-            self.loadContentView.addSubview(self.trendingViewController.view)
         
         //Array for progress bar animation
         
@@ -94,11 +93,7 @@ class CustomTabBarViewController: UIViewController {
     }
     
     @IBAction func searchButtonPressed(sender: UIButton) {
-        
-        UIView.animateWithDuration(100.5, delay: 20.0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.0, options: [], animations: {
-            self.loadContentView.addSubview(self.searchViewController.view)
-            }, completion: nil)
-        
+        self.loadContentView.addSubview(self.searchViewController.view)
         sender.selected = true
         homeButton.selected = false
         accountButton.selected = false
@@ -127,12 +122,11 @@ class CustomTabBarViewController: UIViewController {
     @IBAction func createButtonPressed(sender: UIButton) {
         performSegueWithIdentifier("CreateViewControllerSegue", sender: nil)
     
-        
     }
     
-    
-    
-    
-    
-    
+    override func viewDidAppear(animated: Bool) {
+            self.loadContentView.addSubview(self.trendingViewController.view)
+
+    }
 }
+
