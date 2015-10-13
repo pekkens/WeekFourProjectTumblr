@@ -32,9 +32,6 @@ class CustomTabBarViewController: UIViewController {
     var loadingThree: UIImage!
     var imagesToAnimate: [UIImage]! //array
     var animatedProgressBar: UIImage!
-    
-
-    
 
     
 //  MARK: on view did load
@@ -68,6 +65,7 @@ class CustomTabBarViewController: UIViewController {
         
         createViewController =
             storyboard.instantiateViewControllerWithIdentifier ("CreateViewController") as UIViewController
+            self.loadContentView.addSubview(self.trendingViewController.view)
         
         //Array for progress bar animation
         
@@ -97,7 +95,7 @@ class CustomTabBarViewController: UIViewController {
     
     @IBAction func searchButtonPressed(sender: UIButton) {
         
-        UIView.animateWithDuration(0.5, delay: 2.0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.0, options: [], animations: {
+        UIView.animateWithDuration(100.5, delay: 20.0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.0, options: [], animations: {
             self.loadContentView.addSubview(self.searchViewController.view)
             }, completion: nil)
         

@@ -76,7 +76,6 @@ class CreateViewController: UIViewController {
             self.dismissViewControllerAnimated(true, completion: nil)
         }
         
-        
     }
     
     override func viewDidAppear(animated: Bool) {
